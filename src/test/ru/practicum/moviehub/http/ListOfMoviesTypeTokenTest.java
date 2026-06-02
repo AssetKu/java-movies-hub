@@ -27,7 +27,6 @@ class ListOfMoviesTypeTokenTest {
         assertTrue(json.startsWith("["));
 
         Type listType = new TypeToken<List<Movie>>() {}.getType();
-
         List<Movie> parsed = gson.fromJson(json, listType);
 
         assertEquals(2, parsed.size());
